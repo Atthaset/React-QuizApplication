@@ -10,16 +10,17 @@ const Quiz = () => {
 
   useEffect(() => {
     checkAnswer()
+    // eslint-disable-next-line
   }, [selectChoices])
 
   const checkAnswer = () => {
-    if (selectChoices != "") {
+    if (selectChoices !== "") {
       if (selectChoices === QuestionsData[currentQuestions].answer) {
         setScore(score + 1)
         nextQuestions()
       }
       else {
-        console.log("ตอบผิด");
+        //console.log("ตอบผิด");
         nextQuestions()
       }
     }
